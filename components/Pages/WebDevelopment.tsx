@@ -1,16 +1,16 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import SectionTitle from '@/components/Common/SectionTitle'
-import OurProcess from '@/components/servicePage/OurProcess'
-import Contact from '@/components/Contact'
-import webimage from '../../public/images/website_banner.webp'
+import Image from "next/image";
+import Link from "next/link";
+import SectionTitle from "@/components/Common/SectionTitle";
+import OurProcess from "@/components/servicePage/OurProcess";
+import Contact from "@/components/Contact";
+import webimage from "../../public/images/website_banner.webp";
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
     <path d="M5.8535 12.6631C5.65824 12.8584 5.34166 12.8584 5.1464 12.6631L0.678505 8.1952C0.483242 7.99994 0.483242 7.68336 0.678505 7.4881L2.32921 5.83739C2.52467 5.64193 2.84166 5.64216 3.03684 5.83791L5.14622 7.95354C5.34147 8.14936 5.65859 8.14952 5.85403 7.95388L13.3797 0.420561C13.575 0.22513 13.8917 0.225051 14.087 0.420383L15.7381 2.07143C15.9333 2.26669 15.9333 2.58327 15.7381 2.77854L5.8535 12.6631Z" />
   </svg>
-)
+);
 
 const List = ({ text }) => (
   <p className="mb-5 flex items-center text-lg font-medium text-body-color">
@@ -19,32 +19,31 @@ const List = ({ text }) => (
     </span>
     {text}
   </p>
-)
+);
 
-const WebDevelopment = ({ hero, features = [], steps = [] }) => {
+const WebDevelopment = ({ hero, features = [], steps = [],aboutContent ,aboutSection2Content}) => {
   return (
     <>
       {/* Hero Section */}
       <section className="bg-gray-50 py-20 dark:bg-gray-900">
-         <div className="container mx-auto grid items-center gap-12 px-6 md:grid-cols-2">
+        <div className="container mx-auto grid items-center gap-12 px-6 md:grid-cols-2">
           {/* Text Column */}
           <div>
             <h1 className="mb-6 font-bold text-gray-900 dark:text-white md:text-5xl">
-             {hero.title}
+              {hero.title}
             </h1>
             <p className="mb-4 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-           {hero.subtitle}
+              {hero.subtitle}
             </p>
             <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-             {hero.description2}
+              {hero.description2}
             </p>
           </div>
-          
-      
+
           {/* Image Column */}
-           <div className="relative w-full overflow-hidden rounded-xl ">
+          <div className="relative w-full overflow-hidden rounded-xl ">
             <img
-            // src="/images/about/about-image.svg"
+              // src="/images/about/about-image.svg"
               src="https://makeagency.co.uk/wp-content/uploads/2024/06/Boxpark_28.03.2024-1024x1024.png"
               alt="Agency work showcase"
               className="h-auto w-full object-cover"
@@ -54,8 +53,7 @@ const WebDevelopment = ({ hero, features = [], steps = [] }) => {
               Shoreditch. Croydon. Wembley. Liverpool. More TBC.
             </div>
           </div>
-         
-        </div> 
+        </div>
       </section>
 
       {/* Features Section */}
@@ -73,69 +71,187 @@ const WebDevelopment = ({ hero, features = [], steps = [] }) => {
           </div>
         </div>
       </section> */}
- <section className="py-16 md:py-20 lg:py-28">
-             <div className="container">
-               <div className="-mx-4 flex flex-wrap items-center">
-                 <div className="w-full px-4 lg:w-1/2">
-                   <div
-                    className="wow fadeInUp relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0"
-                    data-wow-delay=".15s"
-                  >
-                    <Image
-                      src="/images/about/about-image-2.svg"
-                      alt="about image"
-                      fill
-                      className="drop-shadow-three dark:hidden dark:drop-shadow-none"
-                    />
-                    <Image
-                      src="/images/about/about-image-2-dark.svg"
-                      alt="about image"
-                      fill
-                      className="drop-shadow-three hidden dark:block dark:drop-shadow-none"
-                    />
-                  </div>
+      {/* <section className="py-16 md:py-20 lg:py-28">
+        <div className="container">
+          <div className="-mx-4 flex flex-wrap items-center">
+            <div className="w-full px-4 lg:w-1/2">
+              <div
+                className="wow fadeInUp relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0"
+                data-wow-delay=".15s"
+              >
+                <Image
+                  src="/images/about/about-image-2.svg"
+                  alt="about image"
+                  fill
+                  className="drop-shadow-three dark:hidden dark:drop-shadow-none"
+                />
+                <Image
+                  src="/images/about/about-image-2-dark.svg"
+                  alt="about image"
+                  fill
+                  className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
+                />
+              </div>
+            </div>
+            <div className="w-full px-4 lg:w-1/2">
+              <div
+                className="wow fadeInUp max-w-[470px] space-y-9"
+                data-wow-delay=".2s"
+              >
+                <div>
+                  <h2 className="mb-3 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                    Custom Website Development for Startups, Small Businesses,
+                    and Growing Brands
+                  </h2>
+                  <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                    Your website isn’t just a digital address — it’s your
+                    brand’s first handshake, your top salesperson, and your
+                    strongest marketing tool.
+                  </p>
                 </div>
-                <div className="w-full px-4 lg:w-1/2">
-                  <div className="wow fadeInUp max-w-[470px] space-y-9" data-wow-delay=".2s">
-                    {/* Mission Statement */}
-                    <div>
-                      <h2 className="mb-3 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                        Custom Website Development for Startups, Small Businesses, and Growing Brands
-                      </h2>
-                      <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                        Your website isn’t just a digital address — it’s your brand’s first handshake, your top salesperson, and your strongest marketing tool.
-                      </p>
-                    </div>
-      
-                    {/* Expertise Highlight */}
-                    <div>
-                     
-                      <p className="text-base -mt-4 font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                        We build clean, mobile-optimized, SEO-first websites designed to grow with you.
-                      </p>
-                    </div>
-      
-                    {/* Approach Overview */}
-                    <div>
-                    
-                      <p className="text-base -mt-4 font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                        Whether you’re launching your first startup, scaling your service business, or upgrading an old site, we’ll craft a web experience that loads fast, ranks better, and drives real results.
-                      </p>
-                    </div>
-                  </div>
+
+                {/* Expertise Highlight */}
+                {/* <div>
+                  <p className="-mt-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                    We build clean, mobile-optimized, SEO-first websites
+                    designed to grow with you.
+                  </p>
+                </div>
+
+                {/* Approach Overview */}
+                {/* <div>
+                  <p className="-mt-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                    Whether you’re launching your first startup, scaling your
+                    service business, or upgrading an old site, we’ll craft a
+                    web experience that loads fast, ranks better, and drives
+                    real results.
+                  </p>
                 </div>
               </div>
             </div>
-          </section>
-          <section id="about" className="pt-16 md:pt-20 lg:pt-28">
+          </div>
+        </div>
+      </section> */}
+
+        <section className={aboutSection2Content.sectionClass}>
+      <div className="container">
+        <div className="-mx-4 flex flex-wrap items-center">
+          <div className="w-full px-4 lg:w-1/2">
+            <div
+              className="wow fadeInUp relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0"
+              data-wow-delay=".15s"
+            >
+              <Image
+                src={aboutSection2Content?.images[0] || ''}
+                alt="about image"
+                fill
+                className="drop-shadow-three dark:hidden dark:drop-shadow-none"
+              />
+              <Image
+                src={aboutSection2Content?.images[1]}
+                alt="about image"
+                fill
+                className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
+              />
+            </div>
+          </div>
+          <div className="w-full px-4 lg:w-1/2">
+            <div
+              className="wow fadeInUp max-w-[470px] space-y-9"
+              data-wow-delay=".2s"
+            >
+              <div>
+                <h2 className="mb-3 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                  {aboutSection2Content.heading}
+                </h2>
+                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                  {aboutSection2Content.paragraphs[0]}
+                </p>
+              </div>
+
+              {/* Expertise Highlight */}
+              <div>
+                <p className="-mt-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                  {aboutSection2Content.paragraphs[1]}
+                </p>
+              </div>
+
+              {/* Approach Overview */}
+              <div>
+                <p className="-mt-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                  {aboutSection2Content?.paragraphs[2]}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      {/* <section id="about" className="pt-16 md:pt-20 lg:pt-28">
+        <div className="container">
+          <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+            <div className="-mx-4 flex flex-wrap items-center">
+              <div className="w-full px-4 lg:w-1/2">
+                <SectionTitle
+                  title="Websites That Perform, Not Just Look Good"
+                  paragraph="When we build your site, we prioritize We build websites that aren’t just pretty — they perform where it counts"
+                  mb="44px"
+                />
+
+                <div
+                  className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0"
+                  data-wow-delay=".15s"
+                >
+                  <div className="mx-[-12px] flex flex-wrap">
+                    <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+                      <List text="Fast Load Speeds" />
+                      <List text="SEO Architecture" />
+                      <List text="Conversion-Ready UX" />
+                      <List text=" Scalable CMS Options" />
+                    </div>
+
+                    {/* <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+                    <List text="Transparency" />
+                    <List text="Speed" />
+                  </div> */}
+                  {/* </div>
+                </div>
+              </div>
+
+              <div className="w-full px-4 lg:w-1/2">
+                <div
+                  className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0"
+                  data-wow-delay=".2s"
+                >
+                  <Image
+                    src="/images/about/about-image.svg"
+                    alt="about-image"
+                    fill
+                    className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
+                  />
+                  <Image
+                    src="/images/about/about-image-dark.svg"
+                    alt="about-image"
+                    fill
+                    className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> */}
+      {/* </section> */} 
+
+
+     <section  className="pt-16 md:pt-20 lg:pt-28">
       <div className="container">
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Websites That Perform, Not Just Look Good"
-                paragraph="When we build your site, we prioritize We build websites that aren’t just pretty — they perform where it counts"
-                
+                title={aboutContent.title}
+                paragraph={aboutContent.paragraph}
                 mb="44px"
               />
 
@@ -145,17 +261,10 @@ const WebDevelopment = ({ hero, features = [], steps = [] }) => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Fast Load Speeds" />
-                    <List text="SEO Architecture" />
-                    <List text="Conversion-Ready UX" />
-                            <List text=" Scalable CMS Options" />
-                   
+                    {aboutContent.listItems.map((item, index) => (
+                      <List key={index} text={item} />
+                    ))}
                   </div>
-
-                  {/* <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Transparency" />
-                    <List text="Speed" />
-                  </div> */}
                 </div>
               </div>
             </div>
@@ -166,16 +275,16 @@ const WebDevelopment = ({ hero, features = [], steps = [] }) => {
                 data-wow-delay=".2s"
               >
                 <Image
-                  src="/images/about/about-image.svg"
+                  src={aboutContent.images[0]}
                   alt="about-image"
                   fill
-                  className="drop-shadow-three mx-auto max-w-full dark:hidden dark:drop-shadow-none lg:mr-0"
+                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
                 />
                 <Image
-                  src="/images/about/about-image-dark.svg"
+                  src={aboutContent.images[1]}
                   alt="about-image"
                   fill
-                  className="drop-shadow-three mx-auto hidden max-w-full dark:block dark:drop-shadow-none lg:mr-0"
+                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
                 />
               </div>
             </div>
@@ -186,37 +295,34 @@ const WebDevelopment = ({ hero, features = [], steps = [] }) => {
       {/* Process Section */}
       <OurProcess steps={steps} />
 
-         <div>
-          <div className="bg-[#1E0A3C] dark:bg-bg-color-dark h-80 w-full mb-12 mt-12 text-white dark:text-gray-300 text-center flex items-center justify-center">
-            <div>
-              <p className="text-2xl font-semibold mb-4">Launch a Website That Powers Your Growth</p>
-              <p className="text-lg">
-                Ready to turn your website into your business’s best asset?
-              </p>
-              <p className="text-lg mb-6">
-                Let’s build something clean, strategic, and built to scale.
-              </p>
-              <Link href={'/contact'}>
-                <button className="bg-[#F97316] hover:bg-yellow-500 dark:bg-[#F97316] dark:hover:bg-yellow-600 text-black dark:text-black py-2 px-6 rounded">
-                  Get Quote
-                </button>
-              </Link>
-            </div>
+      <div>
+        <div className="mb-12 mt-12 flex h-80 w-full items-center justify-center bg-[#1E0A3C] text-center text-white dark:bg-bg-color-dark dark:text-gray-300">
+          <div>
+            <p className="mb-4 text-2xl font-semibold">
+              Launch a Website That Powers Your Growth
+            </p>
+            <p className="text-lg">
+              Ready to turn your website into your business’s best asset?
+            </p>
+            <p className="mb-6 text-lg">
+              Let’s build something clean, strategic, and built to scale.
+            </p>
+            <Link href={"/contact"}>
+              <button className="hover:bg-yellow-500 dark:hover:bg-yellow-600 rounded bg-[#F97316] px-6 py-2 text-black dark:bg-[#F97316] dark:text-black">
+                Get Quote
+              </button>
+            </Link>
           </div>
         </div>
-
-
-     
+      </div>
 
       {/* Contact Form */}
       <Contact />
     </>
-  )
-}
+  );
+};
 
-export default WebDevelopment
-
-
+export default WebDevelopment;
 
 // import Image from "next/image";
 
@@ -229,7 +335,6 @@ export default WebDevelopment
 // import AboutSectionOne from "@/components/About/AboutSectionOne";
 // import SectionTitle from "@/components/Common/SectionTitle";
 // import Link from "next/link";
-
 
 // const checkIcon = (
 //   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -335,10 +440,8 @@ export default WebDevelopment
 //   );
 
 //   return (
-        
 
 //     <>
-
 
 //       <section
 //         className="
@@ -347,35 +450,35 @@ export default WebDevelopment
 //         duration-300 dark:bg-gray-900
 //       "
 //       >
-        // <div className="container mx-auto grid items-center gap-12 px-6 md:grid-cols-2">
-        //   {/* Text Column */}
-        //   <div>
-        //     <h1 className="mb-6 font-bold text-gray-900 dark:text-white md:text-5xl">
-        //       Website Development
-        //     </h1>
-        //     <p className="mb-4 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-        //       Your Website. Your Growth Engine.
-        //     </p>
-        //     <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-        //       We help founders, startups, and small businesses build websites that look great, load fast, rank high, and drive real business — not just traffic.
-        //     </p>
-        //   </div>
+// <div className="container mx-auto grid items-center gap-12 px-6 md:grid-cols-2">
+//   {/* Text Column */}
+//   <div>
+//     <h1 className="mb-6 font-bold text-gray-900 dark:text-white md:text-5xl">
+//       Website Development
+//     </h1>
+//     <p className="mb-4 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+//       Your Website. Your Growth Engine.
+//     </p>
+//     <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+//       We help founders, startups, and small businesses build websites that look great, load fast, rank high, and drive real business — not just traffic.
+//     </p>
+//   </div>
 
 //           {/* Image Column */}
-          // <div className="relative w-full overflow-hidden rounded-xl ">
-          //   <img
-          //     src="https://makeagency.co.uk/wp-content/uploads/2024/06/Boxpark_28.03.2024-1024x1024.png"
-          //     alt="Agency work showcase"
-          //     className="h-auto w-full object-cover"
-          //   />
-          //   {/* Example overlay text (optional) */}
-          //   <div className="absolute bottom-4 left-4 text-sm text-white">
-          //     Shoreditch. Croydon. Wembley. Liverpool. More TBC.
-          //   </div>
-          // </div>
+// <div className="relative w-full overflow-hidden rounded-xl ">
+//   <img
+//     src="https://makeagency.co.uk/wp-content/uploads/2024/06/Boxpark_28.03.2024-1024x1024.png"
+//     alt="Agency work showcase"
+//     className="h-auto w-full object-cover"
+//   />
+//   {/* Example overlay text (optional) */}
+//   <div className="absolute bottom-4 left-4 text-sm text-white">
+//     Shoreditch. Croydon. Wembley. Liverpool. More TBC.
+//   </div>
+// </div>
 //         </div>
 //       </section>
-     
+
 //       <section className="py-16 md:py-20 lg:py-28">
 //             <div className="container">
 //               <div className="-mx-4 flex flex-wrap items-center">
@@ -409,18 +512,18 @@ export default WebDevelopment
 //                         Your website isn’t just a digital address — it’s your brand’s first handshake, your top salesperson, and your strongest marketing tool.
 //                       </p>
 //                     </div>
-      
+
 //                     {/* Expertise Highlight */}
 //                     <div>
-                     
+
 //                       <p className="text-base -mt-4 font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
 //                         We build clean, mobile-optimized, SEO-first websites designed to grow with you.
 //                       </p>
 //                     </div>
-      
+
 //                     {/* Approach Overview */}
 //                     <div>
-                    
+
 //                       <p className="text-base -mt-4 font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
 //                         Whether you’re launching your first startup, scaling your service business, or upgrading an old site, we’ll craft a web experience that loads fast, ranks better, and drives real results.
 //                       </p>
@@ -430,81 +533,81 @@ export default WebDevelopment
 //               </div>
 //             </div>
 //           </section>
-    //     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
-    //   <div className="container">
-    //     <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
-    //       <div className="-mx-4 flex flex-wrap items-center">
-    //         <div className="w-full px-4 lg:w-1/2">
-    //           <SectionTitle
-    //             title="Websites That Perform, Not Just Look Good"
-    //             paragraph="When we build your site, we prioritize We build websites that aren’t just pretty — they perform where it counts"
-                
-    //             mb="44px"
-    //           />
+//     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
+//   <div className="container">
+//     <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+//       <div className="-mx-4 flex flex-wrap items-center">
+//         <div className="w-full px-4 lg:w-1/2">
+//           <SectionTitle
+//             title="Websites That Perform, Not Just Look Good"
+//             paragraph="When we build your site, we prioritize We build websites that aren’t just pretty — they perform where it counts"
 
-    //           <div
-    //             className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0"
-    //             data-wow-delay=".15s"
-    //           >
-    //             <div className="mx-[-12px] flex flex-wrap">
-    //               <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-    //                 <List text="Fast Load Speeds" />
-    //                 <List text="SEO Architecture" />
-    //                 <List text="Conversion-Ready UX" />
-    //                         <List text=" Scalable CMS Options" />
-                   
-    //               </div>
+//             mb="44px"
+//           />
 
-    //               {/* <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-    //                 <List text="Transparency" />
-    //                 <List text="Speed" />
-    //               </div> */}
-    //             </div>
-    //           </div>
-    //         </div>
+//           <div
+//             className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0"
+//             data-wow-delay=".15s"
+//           >
+//             <div className="mx-[-12px] flex flex-wrap">
+//               <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+//                 <List text="Fast Load Speeds" />
+//                 <List text="SEO Architecture" />
+//                 <List text="Conversion-Ready UX" />
+//                         <List text=" Scalable CMS Options" />
 
-    //         <div className="w-full px-4 lg:w-1/2">
-    //           <div
-    //             className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0"
-    //             data-wow-delay=".2s"
-    //           >
-    //             <Image
-    //               src="/images/about/about-image.svg"
-    //               alt="about-image"
-    //               fill
-    //               className="drop-shadow-three mx-auto max-w-full dark:hidden dark:drop-shadow-none lg:mr-0"
-    //             />
-    //             <Image
-    //               src="/images/about/about-image-dark.svg"
-    //               alt="about-image"
-    //               fill
-    //               className="drop-shadow-three mx-auto hidden max-w-full dark:block dark:drop-shadow-none lg:mr-0"
-    //             />
-    //           </div>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section>
+//               </div>
+
+//               {/* <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+//                 <List text="Transparency" />
+//                 <List text="Speed" />
+//               </div> */}
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className="w-full px-4 lg:w-1/2">
+//           <div
+//             className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0"
+//             data-wow-delay=".2s"
+//           >
+//             <Image
+//               src="/images/about/about-image.svg"
+//               alt="about-image"
+//               fill
+//               className="drop-shadow-three mx-auto max-w-full dark:hidden dark:drop-shadow-none lg:mr-0"
+//             />
+//             <Image
+//               src="/images/about/about-image-dark.svg"
+//               alt="about-image"
+//               fill
+//               className="drop-shadow-three mx-auto hidden max-w-full dark:block dark:drop-shadow-none lg:mr-0"
+//             />
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </section>
 //     <OurProcess steps={steps} />
-        // <div>
-        //   <div className="bg-[#1E0A3C] dark:bg-bg-color-dark h-80 w-full mb-12 mt-12 text-white dark:text-gray-300 text-center flex items-center justify-center">
-        //     <div>
-        //       <p className="text-2xl font-semibold mb-4">Launch a Website That Powers Your Growth</p>
-        //       <p className="text-lg">
-        //         Ready to turn your website into your business’s best asset?
-        //       </p>
-        //       <p className="text-lg mb-6">
-        //         Let’s build something clean, strategic, and built to scale.
-        //       </p>
-        //       <Link href={'/contact'}>
-        //         <button className="bg-[#F97316] hover:bg-yellow-500 dark:bg-[#F97316] dark:hover:bg-yellow-600 text-black dark:text-black py-2 px-6 rounded">
-        //           Get Quote
-        //         </button>
-        //       </Link>
-        //     </div>
-        //   </div>
-        // </div>
+// <div>
+//   <div className="bg-[#1E0A3C] dark:bg-bg-color-dark h-80 w-full mb-12 mt-12 text-white dark:text-gray-300 text-center flex items-center justify-center">
+//     <div>
+//       <p className="text-2xl font-semibold mb-4">Launch a Website That Powers Your Growth</p>
+//       <p className="text-lg">
+//         Ready to turn your website into your business’s best asset?
+//       </p>
+//       <p className="text-lg mb-6">
+//         Let’s build something clean, strategic, and built to scale.
+//       </p>
+//       <Link href={'/contact'}>
+//         <button className="bg-[#F97316] hover:bg-yellow-500 dark:bg-[#F97316] dark:hover:bg-yellow-600 text-black dark:text-black py-2 px-6 rounded">
+//           Get Quote
+//         </button>
+//       </Link>
+//     </div>
+//   </div>
+// </div>
 //        <Contact />
 //     </>
 //   );
