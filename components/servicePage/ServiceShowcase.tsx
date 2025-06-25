@@ -128,7 +128,7 @@ const ServiceShowcase = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {services.map((service) => (
-            <Link href={`/services/${service.path}`} className="block">
+            <Link key={service.id} href={`/services/${service.path}`} className="block">
             <div key={service.id} className="flex flex-col">
               <div className="mb-4 text-gray-800 dark:text-gray-200">
                 {service.icon}

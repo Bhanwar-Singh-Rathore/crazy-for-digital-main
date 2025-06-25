@@ -61,10 +61,11 @@ export default function WebDevDetailPage({ params }: Props) {
   if (slug === undefined || slug === "") {
     return (
       <WebDevelopment
-        hero={heroContent_web}
-        features={listFeatures_web}
-        about={aboutSections_web}
-        steps={processSteps_web}
+       hero={heroContent_mkt_dev}
+          features={listFeatures_mkt_dev}
+          aboutContent={aboutContent}
+          aboutSection2Content={aboutSection2Content}
+          steps={processSteps_mkt_dev}
       />
     );
   }
@@ -193,10 +194,11 @@ export default function WebDevDetailPage({ params }: Props) {
     case "for-founders-solo-teams":
       return (
         <WebDevelopment
-          hero={heroContent_ecom_dev}
-          features={listFeatures_ecom_dev}
-          about={aboutSections_ecom_dev}
-          steps={processSteps_ecom_dev}
+       hero={heroContent_mkt_dev}
+          features={listFeatures_mkt_dev}
+          aboutContent={aboutContent}
+          aboutSection2Content={aboutSection2Content}
+          steps={processSteps_mkt_dev}
         />
       );
     default:

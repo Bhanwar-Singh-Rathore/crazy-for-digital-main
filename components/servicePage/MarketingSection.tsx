@@ -361,25 +361,31 @@ const services: Service[] = [
 
 export default function MarketingSection() {
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-6 space-y-16">
+    <section className="py-12 md:py-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {services.map((service) => (
           <div
             key={service.id}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20"
+            className="grid grid-cols-1 lg:grid-cols-3 gap-6"
           >
-           
             <div>
-              <h2 className="text-3xl font-bold">{service.title}</h2>
-                 <h3 className=" mt-2 text-gray-600">{service.desc}</h3>
+              <h2 className="text-2xl sm:text-3xl font-bold">
+                {service.title}
+              </h2>
+              <p className="mt-2 text-gray-600 text-base md:text-lg">
+                {service.desc}
+              </p>
             </div>
-            <div className="md:col-span-2  mx-32  px-32 border-gray-200 pt-4">
-              <ul className="pl-8 list-disc list-inside text-gray-600 space-y-2">
+
+            <div className="lg:col-span-2">
+              <ul className="pl-5 list-disc list-inside text-gray-600 space-y-2">
                 {service.values.map((val, i) => (
                   <li key={i}>
-                    <Link href={val.path} className="hover:underline">
-                      {val.value}
-                    </Link>
+                    <>
+                      <Link href={val.path} className="hover:underline text-base sm:text-lg">
+                        {val.value}
+                      </Link>
+                    </>
                   </li>
                 ))}
               </ul>
@@ -390,3 +396,4 @@ export default function MarketingSection() {
     </section>
   )
 }
+
